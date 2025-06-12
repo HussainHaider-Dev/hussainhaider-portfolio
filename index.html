@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hussain Haider - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+       
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <video class="hero-bg-video" autoplay muted loop playsinline>
+                <source src="/assets/video.mp4" type="video/mp4" />
+                <!-- fallback text -->
+            </video>
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Hussain Haider</span></h1>
+                <p>A Passionate Software Engineer and AI Engineer</p>
+                <a href="/assets/Hussain Resume Updated.docx" class="cta-button">Download Resume</a>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        
+                        
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I'm Hussain, a Software engineer.I am a passionate Software engineer with AI integrated projects and I love to explore emerging Technologies evolving around the globe.I have work on the Different AI applications and solved many problems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fab fa-html5"></i> HTML</div>
+                    <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+                    <div class="skill-item"><i class="fab fa-js-square"></i> JavaScript</div>
+                    <div class="skill-item"><i class="fab fa-react"></i> React</div>
+                    <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
+                    <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                    <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+                    <div class="skill-item"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                    <!-- Add more skills as needed -->
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>My Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-project-id="1">
+                        <img src="/assets/coreui-1.png" alt="">
+                        <h3>Library Management System</h3>
+                        <p>A brief description of LMS. Highlighting key features and technologies used.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-project-id="2">
+                        <img src="https://via.placeholder.com/400x250.png?text=Project+Beta+Screenshot" alt="">
+                        <h3>Project Beta</h3>
+                        <p>An overview of Project Beta. Focus on the problem it solves and the tech stack.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <!-- <div class="project-card" data-project-id="3">
+                        <img src="https://via.placeholder.com/400x250.png?text=Project+Gamma+Screenshot" alt="Project Gamma Screenshot">
+                        <h3>Project Gamma</h3>
+                        <p>Short summary of Project Gamma. Mention unique aspects or challenges overcome.</p>
+                        <button class="view-details-btn">View Details</button>
+                    </div> -->
+                     <!-- Add more project cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm currently looking for new opportunities, and my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <div class="contact-links">
+                    <a href="mailto:Hussainhaider460@gmail.com" class="contact-button"><i class="fas fa-envelope"></i> Email Me</a>
+                    <a href="https://www.linkedin.com/in/hussain-haider-4b8605347/" target="_blank" class="contact-button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/HussainHaider-Dev" target="_blank" class="contact-button"><i class="fab fa-github"></i> GitHub</a>
+                    <!-- Add more links like Twitter, Dribbble, etc. -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentYear"></span> Hussain Haider. All rights reserved.</p>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <img id="modalProjectImage" src="" alt="Project Screenshot">
+            <h2 id="modalProjectTitle"></h2>
+            <div id="modalProjectTechStack" class="tech-stack">
+                <!-- Tech stack badges will be inserted here by JS -->
+            </div>
+            <p id="modalProjectDescription"></p>
+            <div class="modal-links">
+                <a id="modalProjectLiveLink" href="#" target="_blank" class="modal-button">View Live</a>
+                <a id="modalProjectRepoLink" href="#" target="_blank" class="modal-button">View Code</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // Initialize Typed.js for the hero section
+        new Typed('.hero-content h1 span', {
+            strings: ['Hussain Haider', 'Software Engineer', 'AI Engineer'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
